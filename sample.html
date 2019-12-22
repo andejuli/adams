@@ -21,7 +21,7 @@
     var music = document.getElementById("player");
     $("#player").bind("ended", function(){
     x=x+1;
-    music.src = x%4 + ".mp3";
+    music.src = x + ".mp3";
     music.load();
     music.play();       
     });
