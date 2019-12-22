@@ -16,6 +16,14 @@
       <img src="./images/ReadersDigest-OldFashionedChristmas.jpg" alt="record cover" width="60%"><br>
       <h1>Record 1</h1>
       <h2>Side 1</h2>
+      <audio id="player"></audio>
+        <ul id="playlist">
+          <li data-ogg="http://github.com/andejuli/adams/songs/01 - Deck the Halls.mp3">Deck the Halls</li>
+          <li data-ogg="http://github.com/andejuli/adams/songs/02 - O Come, All Ye Faithful (Adeste Fideles).mp3">O Come, All Ye Faithful</li>
+          <li data-ogg="http://www.lunerouge.org/sons/sf/LRWeird%203%20by%20Lionel%20Allorge.ogg">Space Lab</li>
+      </ul>
+
+<button id="stop">Stop</button>
       <h3>Deck the Halls</h3>
       <audio controls>
         <source src="./songs/01 - Deck the Halls.mp3" type="audio/mpeg">
@@ -28,5 +36,42 @@
       </audio>
       
     </div>
+    <script>
+        // globals
+        var _player = document.getElementById("player"),
+            _playlist = document.getElementById("playlist"),
+            _stop = document.getElementById("stop");
+
+        // functions
+        function playlistItemClick(clickedElement) {
+            var selected = _playlist.querySelector(".selected");
+            if (selected) {
+                selected.classList.remove("selected");
+            }
+            clickedElement.classList.add("selected");
+
+            _player.src = clickedElement.getAttribute("data-ogg");
+            _player.play();
+        }
+
+        function playNext() {
+            var selected = _playlist.querySelector("li.selected");
+            if (selected && selected.nextSibling) {
+                playlistItemClick(selected.nextSibling);
+            }
+        }
+
+        // event listeners
+        _stop.addEventListener("click", function () {
+            _player.pause();
+        });
+        _player.addEventListener("ended", playNext);
+        _playlist.addEventListener("click", function (e) {
+            if (e.target && e.target.nodeName === "LI") {
+                playlistItemClick(e.target);
+            }
+        });​
+
+    </script>
   </body>
 </html>
