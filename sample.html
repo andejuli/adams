@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+  
+ 
+
+
+<audio id="player" autoplay controls>
+  <source src="./songs/01 - Deck the Halls.mp3" type="audio/mp3">
+  <source src="./songs/02 - O Come, All Ye Faithful (Adeste Fideles).mp3" type="audio/mp3">
+</audio>
+
+<script>
+    var x = 0;
+    var music = document.getElementById("player");
+    $("#player").bind("ended", function(){
+    x=x+1;
+    music.src = x%4 + ".mp3";
+    music.load();
+    music.play();       
+    });
+    </script>
+ </body>
+</html>
