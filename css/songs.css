@@ -3,9 +3,7 @@
   margin: 0 auto;
 }
 #record_content {
-   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+   
 }
 .cover {
   display: block;
