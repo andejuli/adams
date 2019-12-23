@@ -52,7 +52,9 @@ button span:after {
   right: -20px;
   transition: 0.5s;
 }
-
+.button:hover {
+  background-color: #3eb2c9;
+}
 button:hover span {
   padding-right: 25px;
 }
