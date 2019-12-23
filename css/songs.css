@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
 }
 #player {
-   text-align:center;
+   width: 100%;
 }
 .cover {
   display: block;
@@ -19,6 +19,8 @@ body {
 }
 .songlist {
   width: 75%;
+  display: block;
+  margin: 0 auto;
 }
 .recordtitle {
   text-align: center;
