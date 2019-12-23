@@ -8,17 +8,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
-    <h1 class="recordtitle">Record 1</h1>
-    <div id="record_content">
-      
-      <audio id="player" autoplay controls>
-        <source src="./songs/1.mp3" type="audio/mp3">
-      </audio>
-      <img class="songlist" src="./images/record1.jpg" alt="record one song list">
-      
-      
+    <div id="content">
+      <h1 class="recordtitle">Record 1</h1>
+      <div id="record_content">
+
+        <audio id="player" autoplay controls>
+          <source src="./songs/1.mp3" type="audio/mp3">
+        </audio>
+        <img class="songlist" src="./images/record1.jpg" alt="record one song list">
+
+
+      </div>
+      <a href="record2.html"><button type="button">Next Record</button></a>
     </div>
-    <a href="record2.html"><button type="button">Next Record</button></a>
     <script>
       var x = 1;
       var music = document.getElementById("player");
