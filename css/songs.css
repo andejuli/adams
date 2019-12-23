@@ -72,7 +72,7 @@ button:hover span:after {
   right: 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
  .songlist {
   width: 100%;
 }
