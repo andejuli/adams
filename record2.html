@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Record1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="list">
+        <h1>Record 1</h1>
+        <h2>Deck the Halls</h2>
+        <h2>O Come, All Ye Faithful</h2>
+        <h2>O Little Town of Bethlehem</h2>
+        <h2>Silent Night</h2>
+        <h2>Away in a Manager</h2>
+        <h2>The Holly and the Ivy</h2>
+        <h2>Hark! The Herald Angles Sing</h2>
+        <h2>Mary's Little Boy Chile</h2>
+        <h2>Ave Maria</h2>
+        <h2>Panis Angelicus</h2>
+        <h2>Go Tell It on the Mountain</h2>
+        <h2>Children, Go Where I send Thee</h2>
+      </div>
+      
+      <audio id="player" autoplay controls>
+        <source src="./songs/13.mp3" type="audio/mp3">
+      </audio>
+    </div>
+    <script>
+      var x = 13;
+      var music = document.getElementById("player");
+      $("#player").bind("ended", function(){
+      x=x+1;
+      music.src = "./songs/" + x + ".mp3";
+      music.load();
+      music.play();       
+      });
+    </script> 
+  </body>
+</html>
