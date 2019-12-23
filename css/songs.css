@@ -4,6 +4,7 @@
 }
 #record_content {
    display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 img {
