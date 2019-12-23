@@ -19,6 +19,7 @@ button {
   border-radius: 4px;
   background-color: #1f8180;
   border: none;
+  display: inline-block;
   color: #FFFFFF;
   text-align: center;
   font-size: 28px;
