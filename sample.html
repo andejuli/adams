@@ -9,12 +9,13 @@
   
     <h1>Sample</h1>
 
-
+<button type="button" onclick="playmusic()">Start Side 1</button>
 <audio id="player" autoplay controls>
   <source src="./songs/0.mp3" type="audio/mp3">
 </audio>
 
 <script>
+  function playmusic() {
     var x = 0;
     var music = document.getElementById("player");
     $("#player").bind("ended", function(){
@@ -23,6 +24,7 @@
     music.load();
     music.play();       
     });
+  }
     </script>
  </body>
 </html>
