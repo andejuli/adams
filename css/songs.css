@@ -12,6 +12,9 @@ img {
 .songlist {
   width: 50%;
 }
+.recordtitle {
+  text-align: center;
+}
 nav {
   display: flex;
   flex-wrap: wrap;
