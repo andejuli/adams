@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
 }
 #player {
-   width: 100%;
+   width: 65%;
 }
 .cover {
   display: block;
@@ -73,6 +73,9 @@ button:hover span:after {
 }
 
 @media screen and (max-width: 700px) {
+  #player {
+   width: 100%;
+}
  .songlist {
   width: 100%;
 }
