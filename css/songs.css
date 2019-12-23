@@ -5,8 +5,8 @@ body {
   width: 70%;
   margin: 0 auto;
 }
-#record_content {
-   
+#player {
+   text-align:center;
 }
 .cover {
   display: block;
