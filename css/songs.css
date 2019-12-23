@@ -5,6 +5,10 @@ body {
   width: 70%;
   margin: 0 auto;
 }
+#record_content {
+  width: 100%;
+  margin: 0 auto;
+}
 #player {
    text-align:center;
 }
