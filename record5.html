@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Record 5 - An Old Fashion Christmas</title>
+    <link rel="stylesheet" type="text/css" href="./css/songs.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      <h1 class="recordtitle">Record 5</h1>
+      <div id="record_content">
+        <div class="player_button">
+          <audio id="player" autoplay controls>
+            <source src="./songs5/49.mp3" type="audio/mp3">
+          </audio><br><br>
+          <nav>
+            <a href="record6.html"><button type="button">Next Record</button></a>
+            <a href="index.html"><button type="button">Home</button></a>
+          </nav>
+        </div>
+        <img class="songlist" src="./images/record5.jpg" alt="record five song list">
+      </div>
+    </div>
+    <script>
+      var x = 49;
+      var music = document.getElementById("player");
+      $("#player").bind("ended", function(){
+      x=x+1;
+      music.src = "./songs5/" + x + ".mp3";
+      music.load();
+      music.play();       
+      });
+    </script> 
+  </body>
+</html>
+
